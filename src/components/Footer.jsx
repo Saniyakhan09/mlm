@@ -1,15 +1,22 @@
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
+import { HiCubeTransparent } from 'react-icons/hi2'
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12 px-4">
+    <footer id="contact" className="bg-slate-900 text-slate-300 pt-14 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="text-yellow-500">VOLO</span><span className="text-white">CHAIN</span>
+            <h3 className="flex items-center gap-2 text-2xl font-extrabold mb-4 text-white">
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-brand-600 to-accent-cyan text-xl">
+                <HiCubeTransparent />
+              </span>
+              MLM Software
             </h3>
-            <p className="text-sm">
-              A leading MLM software provider with 16+ years of experience serving the network marketing industry.
+            <p className="text-sm text-slate-400 leading-relaxed">
+              A leading MLM software provider with 16+ years of experience serving the
+              network marketing industry with reliable, scalable technology.
             </p>
           </div>
 
@@ -17,54 +24,44 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#products" className="hover:text-yellow-500 transition">Our Products</a></li>
-              <li><a href="#plans" className="hover:text-yellow-500 transition">MLM Plans</a></li>
-              <li><a href="#testimonials" className="hover:text-yellow-500 transition">Testimonials</a></li>
-              <li><a href="#contact" className="hover:text-yellow-500 transition">Contact Us</a></li>
+              <li><a href="/services" className="hover:text-orange-400 transition">Our Services</a></li>
+              <li><a href="/plans" className="hover:text-orange-400 transition">MLM Plans</a></li>
+              <li><a href="/#about" className="hover:text-orange-400 transition">About Us</a></li>
+              <li><a href="/#testimonials" className="hover:text-orange-400 transition">Reviews</a></li>
+              <li><a href="/#enquiry" className="hover:text-orange-400 transition">Get a Quote</a></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-bold mb-4">Services</h4>
+            <h4 className="text-white font-bold mb-4">Top Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-yellow-500 transition">MLM Software</a></li>
-              <li><a href="#" className="hover:text-yellow-500 transition">Mobile App</a></li>
-              <li><a href="#" className="hover:text-yellow-500 transition">Web Design</a></li>
-              <li><a href="#" className="hover:text-yellow-500 transition">Support & Training</a></li>
+              <li><a href="/#products" className="hover:text-orange-400 transition">MLM Software</a></li>
+              <li><a href="/#products" className="hover:text-orange-400 transition">MLM Mobile App</a></li>
+              <li><a href="/#products" className="hover:text-orange-400 transition">Crypto Integration</a></li>
+              <li><a href="/#products" className="hover:text-orange-400 transition">Web Design</a></li>
+              <li><a href="/#products" className="hover:text-orange-400 transition">Support &amp; Training</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="text-white font-bold mb-4">Contact Us</h4>
-            <p className="text-sm mb-2">
-              <span className="block">📧 sales@volochainsoftware.com</span>
-              <span className="block mt-2">📱 +91-7840001055</span>
-              <span className="block">📱 +91-8800477669</span>
-            </p>
+            <ul className="space-y-3 text-sm text-slate-400">
+              <li className="flex items-start gap-2"><FiMail className="mt-0.5 text-orange-400" /> sales@yourcompany.com</li>
+              <li className="flex items-start gap-2"><FiPhone className="mt-0.5 text-orange-400" /> +91-00000-00000</li>
+              <li className="flex items-start gap-2"><FiPhone className="mt-0.5 text-orange-400" /> +91-00000-00001</li>
+              <li className="flex items-start gap-2"><FiMapPin className="mt-0.5 text-orange-400" /> Your Office Address, City, India</li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div>
-              <h5 className="text-white font-semibold mb-2">Why Choose Us?</h5>
-              <p>Proven track record with 16+ years of experience and 8000+ satisfied clients worldwide.</p>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold mb-2">Our Commitment</h5>
-              <p>24/7 dedicated support, customized solutions, and continuous innovation for your success.</p>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold mb-2">Get Started</h5>
-              <p>Request a free demo or quote today and discover how Volochain can transform your business.</p>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-            <p>&copy; 2024 Volochain MLM Software. All rights reserved. | Privacy Policy | Terms of Service</p>
-          </div>
+        <div className="border-t border-slate-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-slate-400">
+          <p>&copy; 2026 MLM Software. All rights reserved.</p>
+          <p className="flex gap-4">
+            <a href="#" className="hover:text-orange-400 transition">Privacy Policy</a>
+            <a href="#" className="hover:text-orange-400 transition">Terms of Service</a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,20 +1,25 @@
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import AboutUs from './components/AboutUs'
-import Services from './components/Services'
-import Testimonials from './components/Testimonials'
-import CTA from './components/CTA'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './pages/Home'
+import ServicesPage from './pages/ServicesPage'
+import ServiceDetail from './pages/ServiceDetail'
+import PlansPage from './pages/PlansPage'
+import PlanDetail from './pages/PlanDetail'
 
 function App() {
   return (
-    <div className="bg-dark-900 min-h-screen">
+    <div className="bg-white min-h-screen">
+      <ScrollToTop />
       <Header />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <Testimonials />
-      <CTA />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/plans" element={<PlansPage />} />
+        <Route path="/plans/:slug" element={<PlanDetail />} />
+      </Routes>
       <Footer />
     </div>
   )

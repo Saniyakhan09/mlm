@@ -7,15 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: {
-          900: '#0f172a',
-          800: '#1a1f3a',
-          700: '#252d47',
+        brand: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
         },
         accent: {
           purple: '#8b5cf6',
           blue: '#3b82f6',
-          cyan: '#22d3ee',
+          cyan: '#06b6d4',
+          pink: '#ec4899',
+          amber: '#f59e0b',
+        },
+        ink: {
+          900: '#0f172a',
+          700: '#334155',
+          500: '#64748b',
+          300: '#cbd5e1',
         },
       },
       animation: {
@@ -34,8 +44,8 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(139, 92, 246, 0.4)' },
-          '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.45)' },
         },
         bounceSlow: {
           '0%, 100%': { transform: 'translateY(0)' },
@@ -44,6 +54,10 @@ export default {
       },
       backdropBlur: {
         xs: '2px',
+      },
+      boxShadow: {
+        'soft': '0 10px 40px -10px rgba(79, 70, 229, 0.18)',
+        'card': '0 8px 30px -12px rgba(15, 23, 42, 0.15)',
       },
     },
   },

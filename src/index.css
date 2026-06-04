@@ -8,17 +8,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: #0f172a;
-  color: #e2e8f0;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-/* Glass Morphism Effect */
+body {
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+/* Offset anchored sections for the sticky header */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Light frosted card */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.12);
 }
 
 /* Smooth animations */
@@ -55,15 +65,15 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.45);
-  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+  border-color: #6366f1;
 }
 
-/* Premium grid background */
+/* Soft dotted grid background for light sections */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
   background-size: 56px 56px;
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
@@ -78,10 +88,20 @@ textarea:focus {
   animation: float 12s ease-in-out infinite;
 }
 
-/* Premium gradient text helper */
+/* Brand gradient text helper */
 .text-gradient {
-  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #22d3ee 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* WhatsApp chat wallpaper */
+.wa-wallpaper {
+  background-color: #efeae2;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+  background-size: 22px 22px, 22px 22px;
+  background-position: 0 0, 11px 11px;
 }
